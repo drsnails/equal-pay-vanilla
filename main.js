@@ -94,7 +94,7 @@ function onCalculatePay(ev) {
     if (!trans.length) return
     const transHTML = getTransHTMl(trans)
     const elResults = document.querySelector('.results')
-    elResults.innerHTML = `<h5>Average: ${avg}</h5>` + transHTML
+    elResults.innerHTML = `<h5>Average: ${getFormattedNum(avg)}</h5>` + transHTML
     togglePage()
 }
 
@@ -105,7 +105,7 @@ function getTransHTMl(trans) {
             <span class="from">${trans.from}</span>
             <img src="right-arrow.svg" alt="">
             <span class="to">${trans.to}</span>
-            <span class="amount">${trans.amount.toFixed(2)}</span>
+            <span class="amount">${getFormattedNum(trans.amount)}</span>
         </section>
         `
     }).join('')
@@ -177,4 +177,12 @@ function createTransaction(from, to, amount) {
         to,
         amount
     }
+}
+
+function getFormattedNum(num) {
+    num = +num
+    if (num % 1 !== 0) {
+        num = num.toFixed(1)
+    } 
+    return num
 }
