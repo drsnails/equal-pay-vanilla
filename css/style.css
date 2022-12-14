@@ -44,6 +44,13 @@ button {
     flex-direction: column;
 }
 
+@media screen and (width < 480px) {
+    .input-container,
+    .res-container {
+        min-width: 98%;
+    }
+}
+
 .add-user-container {
     display: flex;
     justify-content: space-between;
@@ -105,8 +112,10 @@ button {
     justify-content: space-between;
 }
 
-.calc-btns-container button, .back {
+.calc-btns-container button,
+.back {
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 .calc-btns-container .calculate-btn {
@@ -124,7 +133,7 @@ button {
 .res-container {
     display: flex;
     flex-direction: column;
-    
+
     /* align-items: center; */
 }
 
@@ -138,7 +147,6 @@ button {
     text-align: center;
     margin-bottom: 30px;
     padding: 10px 20px;
-
 }
 
 .trans-preview {
@@ -150,8 +158,6 @@ button {
     justify-content: space-around;
     position: relative;
     box-shadow: 0 0px 2px 0px rgb(52 81 111 / 21%);
-
-
 }
 
 .trans-preview span {
@@ -166,7 +172,6 @@ span.from {
     display: inline-block;
     position: relative;
     display: flex;
-
 }
 .trans-preview span img {
     height: 30px;
@@ -176,7 +181,7 @@ span.from {
 .trans-preview .span-img::before {
     content: attr(data-amount);
     position: absolute;
-    left: 29%;
+    left: 32%;
     top: -10px;
 }
 .trans-preview .amount {
@@ -189,14 +194,11 @@ span.from {
     border: 1px solid rgb(89, 136, 183);
     width: fit-content;
     padding: 10px 20px;
-
-
 }
 
 .res-container section:has(.back) {
     margin: auto;
     padding: 10px 20px;
-
 }
 
 .hide {
