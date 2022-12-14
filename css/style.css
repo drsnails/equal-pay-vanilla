@@ -47,7 +47,14 @@ button {
 @media screen and (width < 480px) {
     .input-container,
     .res-container {
-        min-width: 98%;
+        min-width: 100vw;
+        min-height: 100vh;
+        margin-block: 0;
+    }
+
+    .form {
+        padding-top: 20px;
+
     }
 }
 
