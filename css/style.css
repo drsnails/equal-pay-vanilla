@@ -5,6 +5,7 @@ body {
 }
 
 h1,
+h5,
 hr,
 fieldset {
     margin: 0;
@@ -27,7 +28,7 @@ button {
 }
 
 .input-container,
-.results {
+.res-container {
     width: 60vw;
     min-width: 350px;
     min-height: 70vh;
@@ -51,6 +52,7 @@ button {
 
 .add-user-container button {
     background-color: green;
+    font-size: 1.2rem;
 }
 
 form {
@@ -76,6 +78,7 @@ form fieldset input {
     /* margin: 5px; */
     border: none;
     max-width: 45%;
+    font-size: 1.07em;
     border-radius: 2px;
     height: 100%;
     background-color: rgb(202, 202, 202);
@@ -110,9 +113,24 @@ form fieldset button {
     width: 40%;
 }
 
+.res-container {
+    display: flex;
+    flex-direction: column;
+    
+    /* align-items: center; */
+}
+
 .results {
     font-size: 1.3rem;
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    flex-grow: 1;
+}
+
+.results h5 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+
 }
 
 .trans-preview {
@@ -138,6 +156,20 @@ span.from {
 .trans-preview .amount {
     position: absolute;
     top: 0;
+}
+
+.res-container .back {
+    color: black;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px 10px;
+
+}
+
+.res-container section:has(.back) {
+    margin: auto;
+    padding: 10px 20px;
+
 }
 
 .hide {

@@ -90,22 +90,13 @@ function onClearAll() {
 
 function onCalculatePay(ev) {
     ev.preventDefault()
-    const trans = getPaymentTrans(Object.values(gUsersMap))
+    const { results: trans, avg } = getPaymentTrans(Object.values(gUsersMap))
     console.log('trans:', trans)
     const transHTML = getTransHTMl(trans)
-    const elInputContainer = document.querySelector('.input-container')
     const elResults = document.querySelector('.results')
-    elResults.innerHTML = transHTML
+    elResults.innerHTML = `<h5>Average: ${avg}</h5>` + transHTML
     console.log('transHTML:', transHTML)
-    elInputContainer.classList.add('hide')
-    elResults.classList.remove('hide')
-
-
-
-
-
-
-
+    togglePage()
 }
 
 function getTransHTMl(trans) {
@@ -170,7 +161,14 @@ function getPaymentTrans(users) {
         }
     }
     console.log('results:', results)
-    return results
+    return { results, avg }
+}
+
+function togglePage() {
+    const elInputContainer = document.querySelector('.input-container')
+    const elResContainer = document.querySelector('.res-container')
+    elInputContainer.classList.toggle('hide')
+    elResContainer.classList.toggle('hide')
 }
 
 
