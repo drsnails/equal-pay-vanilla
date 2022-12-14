@@ -53,7 +53,9 @@ button {
 
 .add-user-container button {
     background-color: green;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    height: 40px;
+    aspect-ratio: 1/1;
 }
 
 .form {
@@ -90,8 +92,9 @@ button {
 
 .form .fieldset button {
     height: 100%;
-    background-color: rgb(213, 66, 66);
+    background-color: hsl(0deg 64% 55%);
     margin-left: 10px;
+    aspect-ratio: 1/1;
 }
 
 .calc-btns-container {
