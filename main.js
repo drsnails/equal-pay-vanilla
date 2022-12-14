@@ -96,7 +96,7 @@ function onCalculatePay(ev) {
     if (!trans.length) return
     const transHTML = getTransHTMl(trans)
     const elResults = document.querySelector('.results')
-    elResults.innerHTML = `<h5>Average: ${getFormattedNum(avg)}</h5>` + transHTML
+    elResults.innerHTML = `<h4>Average: ${getFormattedNum(avg)}</h4>` + transHTML
     togglePage()
 }
 
