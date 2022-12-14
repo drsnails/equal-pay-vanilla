@@ -70,7 +70,7 @@ function onAddInput() {
 
 
 function onRemoveInput(userId) {
-    if (Object.keys(gUsersMap).length <= 2) return
+    // if (Object.keys(gUsersMap).length <= 2) return
     delete gUsersMap[userId]
     saveUsersToStorage(gUsersMap)
     renderInputs()
@@ -91,11 +91,10 @@ function onClearAll() {
 function onCalculatePay(ev) {
     ev.preventDefault()
     const { results: trans, avg } = getPaymentTrans(Object.values(gUsersMap))
-    console.log('trans:', trans)
+    if (!trans.length) return
     const transHTML = getTransHTMl(trans)
     const elResults = document.querySelector('.results')
     elResults.innerHTML = `<h5>Average: ${avg}</h5>` + transHTML
-    console.log('transHTML:', transHTML)
     togglePage()
 }
 
