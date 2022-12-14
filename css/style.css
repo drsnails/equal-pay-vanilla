@@ -7,7 +7,7 @@ body {
 h1,
 h5,
 hr,
-fieldset {
+.fieldset {
     margin: 0;
     padding: 0;
 }
@@ -55,13 +55,13 @@ button {
     font-size: 1.2rem;
 }
 
-form {
+.form {
     width: 100%;
     flex-grow: 1;
     margin-bottom: 20px;
 }
 
-form fieldset {
+.form .fieldset {
     border: none;
     display: flex;
     /* justify-content: space-between; */
@@ -70,11 +70,11 @@ form fieldset {
     padding: 10px 20px;
     height: 50px;
 }
-form fieldset section {
+.form .fieldset section {
     flex-grow: 1;
 }
 
-form fieldset input {
+.form .fieldset input {
     /* margin: 5px; */
     border: none;
     max-width: 45%;
@@ -83,11 +83,11 @@ form fieldset input {
     height: 100%;
     background-color: rgb(223, 223, 223);
 }
-form fieldset input:first-of-type {
+.form .fieldset input:first-of-type {
     margin-right: 10px;
 }
 
-form fieldset button {
+.form .fieldset button {
     height: 100%;
     background-color: rgb(213, 66, 66);
     margin-left: 10px;
@@ -135,10 +135,15 @@ form fieldset button {
 
 .trans-preview {
     padding: 10px;
+    padding-top: 16px;
+    margin-bottom: 23px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
+    box-shadow: 0 0px 2px 0px rgb(52 81 111 / 21%);
+
+
 }
 
 .trans-preview span {
@@ -146,12 +151,25 @@ form fieldset button {
 }
 
 span.from {
-    padding-right: 10px;
+    /* padding-right: 10px; */
+}
+.trans-preview .span-img {
+    flex-grow: 0.8;
+    display: inline-block;
+    position: relative;
+    display: flex;
+
+}
+.trans-preview span img {
+    height: 30px;
+    width: 100%;
 }
 
-.trans-preview img {
-    height: 30px;
-    flex-grow: 0.7;
+.trans-preview .span-img::before {
+    content: attr(data-amount);
+    position: absolute;
+    left: 29%;
+    top: -10px;
 }
 .trans-preview .amount {
     position: absolute;
@@ -160,7 +178,7 @@ span.from {
 
 .res-container .back {
     color: black;
-    border: 1px solid black;
+    border: 1px solid rgb(89, 136, 183);
     width: fit-content;
     padding: 5px 10px;
 

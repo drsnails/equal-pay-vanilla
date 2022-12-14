@@ -34,19 +34,18 @@ function createUser(usersMap) {
 }
 
 function renderInputs() {
-    const elForm = document.querySelector('form')
+    const elForm = document.querySelector('.form')
     let strHTML = ''
     for (const userId in gUsersMap) {
-        console.log('userId:', userId)
         const user = gUsersMap[userId]
         strHTML += `
-        <fieldset>
+        <div class="fieldset" onclick="evs(event)">
             <section>
                 <input value="${user.name}" oninput="onInput(event, '${userId}', 'name')" type="text" name="name" id="" placeholder="Name">
                 <input value="${user.amount}" oninput="onInput(event, '${userId}', 'amount')" type="number" name="amount" id="" placeholder="Amount">
             </section>
-            <button onclick=onRemoveInput('${userId}')>X</button>
-        </fieldset>
+            <button onclick="onRemoveInput('${userId}', event)">X</button>
+        </div>
         `
     }
     elForm.innerHTML = strHTML
@@ -69,7 +68,10 @@ function onAddInput() {
 }
 
 
-function onRemoveInput(userId) {
+function onRemoveInput(userId, ev) {
+    console.log('userId:', userId)
+    console.log('ev:', ev)
+    ev.stopPropagation()
     // if (Object.keys(gUsersMap).length <= 2) return
     delete gUsersMap[userId]
     saveUsersToStorage(gUsersMap)
@@ -98,12 +100,35 @@ function onCalculatePay(ev) {
     togglePage()
 }
 
+/*TEST START*/
+
 function getTransHTMl(trans) {
     let transHTML = trans.map(trans => {
         return `
         <section class="trans-preview">
             <span class="from">${trans.from}</span>
-            <img src="right-arrow.svg" alt="">
+            <span data-amount="${getFormattedNum(trans.amount)}" class="span-img"><img src="right-arrow.svg" alt=""></span>
+            <span class="to">${trans.to}</span>
+        </section>
+        `
+    }).join('')
+
+    return transHTML
+}
+
+/*TEST END*/
+
+
+
+/*ORIGINAL START*/
+
+/*
+function getTransHTMl(trans) {
+    let transHTML = trans.map(trans => {
+        return `
+        <section class="trans-preview">
+            <span class="from">${trans.from}</span>
+            <span data-amount="${getFormattedNum(trans.amount)}" class="span-img"><img src="right-arrow.svg" alt=""></span>
             <span class="to">${trans.to}</span>
             <span class="amount">${getFormattedNum(trans.amount)}</span>
         </section>
@@ -112,6 +137,9 @@ function getTransHTMl(trans) {
 
     return transHTML
 }
+*/
+
+/*ORIGINAL END*/
 
 function* genNextId() {
     let id = 101
@@ -183,6 +211,11 @@ function getFormattedNum(num) {
     num = +num
     if (num % 1 !== 0) {
         num = num.toFixed(1)
-    } 
+    }
     return num
+}
+
+function evs(ev) {
+    ev.preventDefault()
+    ev.stopPropagation()
 }

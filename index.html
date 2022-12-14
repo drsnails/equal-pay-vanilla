@@ -13,15 +13,9 @@
     <section class="input-container">
         <h1 class="add-user-container"><span>Add User</span> <button onclick="onAddInput()">+</button></h1>
         <hr>
-        <form >
-            <!-- <fieldset>
-                <section>
-                    <input type="text" name="" id="" placeholder="Name">
-                    <input type="number" name="" id="" placeholder="Amount">
-                </section>
-                <button onclick="onRemoveInput(this)">X</button>
-            </fieldset> -->
-        </form>
+        <section class="form" onsubmit="evs(event)">
+
+        </section class="form">
         <section class="calc-btns-container">
             <button onclick="onCalculatePay(event)" class="calculate-btn">Calculate</button>
             <button onclick="onClearAll(event)" class="clear-btn">Clear</button>
@@ -31,7 +25,13 @@
 
     <div class="res-container hide">
         <section class="results">
-           
+            <!-- <h5>Average: 34</h5>
+            <section class="trans-preview">
+                <span class="from">Bobo</span>
+                <span data-amount="3432" class="span-img"><img src="right-arrow.svg" alt=""></span>
+                <span class="to">Zozi</span>
+                <span class="amount">3432</span>
+            </section> -->
         </section>
         <section>
             <button class="back" onclick="togglePage()">Back</button>
