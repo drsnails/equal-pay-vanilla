@@ -42,7 +42,7 @@ button {
 .wrap-container {
     width: fit-content;
     display: flex;
-    translate: -50%;
+    translate: 0%;
     transition: translate 0.3s;
 
 }

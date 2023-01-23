@@ -160,24 +160,24 @@ function togglePage() {
 
 function showResPage() {
     const elWarpContainer = document.querySelector('.wrap-container')
-    elWarpContainer.style.translate = '0%'
+    elWarpContainer.style.translate = '-50%'
     const elResContainer = document.querySelector('.res-container')
     elResContainer.classList.remove('hide')
     setTimeout(() => {
         const elInputContainer = document.querySelector('.input-container')
         elInputContainer.classList.add('hide')
-    }, 350);
+    }, 300);
 }
 
 function showHomePage() {
     const elWarpContainer = document.querySelector('.wrap-container')
-    elWarpContainer.style.translate = '-50%'
+    elWarpContainer.style.translate = '0%'
     const elInputContainer = document.querySelector('.input-container')
     elInputContainer.classList.remove('hide')
     setTimeout(() => {
         const elResContainer = document.querySelector('.res-container')
         elResContainer.classList.add('hide')
-    }, 350)
+    }, 300)
 }
 
 function evs(ev) {
