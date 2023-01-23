@@ -32,10 +32,10 @@ button {
     /* display: flex; */
     /* overflow-x: hidden; */
     width: 60vw;
-
-    min-height: 70vh;
     min-width: 350px;
     max-width: 400px;
+
+    min-height: 70vh;
     margin: auto;
     overflow: hidden;
 }
@@ -43,7 +43,7 @@ button {
     width: fit-content;
     display: flex;
     translate: -50%;
-    transition: translate 0.5s;
+    transition: translate 0.3s;
 
 }
 
@@ -103,6 +103,10 @@ button {
     font-size: 1.7rem;
     height: 40px;
     aspect-ratio: 1/1;
+}
+
+.add-user-container > span {
+    font-size: 1.5em;
 }
 
 .form {
@@ -242,5 +246,5 @@ span.from {
 }
 
 .hide {
-    display: none;
+    visibility: hidden;
 }
