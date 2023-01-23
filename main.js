@@ -1,4 +1,6 @@
 'use strict'
+navigator.serviceWorker.register('./sw.js')
+
 var gNextId = genNextId()
 
 

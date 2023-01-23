@@ -1,0 +1,26 @@
+{
+    "name": "Equal Pay",
+    "short_name": "Equal Pay",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#4444ee",
+    "description": "App for calculating group payments.",
+    "icons": [
+        {
+            "src": "img/logo-44.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "img/logo-120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "img/logo-152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        }
+    ]
+}
