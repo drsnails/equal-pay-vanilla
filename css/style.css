@@ -27,12 +27,31 @@ button {
 * {
     box-sizing: border-box;
 }
+.main-container {
+    /* width: fit-content; */
+    /* display: flex; */
+    /* overflow-x: hidden; */
+    width: 60vw;
+
+    min-height: 70vh;
+    min-width: 350px;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+.wrap-container {
+    width: fit-content;
+    display: flex;
+    translate: -50%;
+    transition: translate 0.5s;
+
+}
 
 .input-container,
 .res-container {
     width: 60vw;
-    min-width: 350px;
     min-height: 70vh;
+    min-width: 350px;
     max-width: 400px;
     background-color: #e9e9e9;
     margin: auto;
@@ -42,11 +61,12 @@ button {
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: transform .5s;
+    
+    
 }
 
 .res-container {
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
 }
 
 .input-container.move-right {
@@ -58,6 +78,7 @@ button {
 }
 
 @media screen and (width < 480px) {
+    .main-container,
     .input-container,
     .res-container {
         min-width: 100vw;
@@ -67,7 +88,6 @@ button {
 
     .form {
         padding-top: 20px;
-
     }
 }
 
@@ -224,4 +244,3 @@ span.from {
 .hide {
     display: none;
 }
-

@@ -98,7 +98,8 @@ function onCalculatePay(ev) {
     const transHTML = getTransHTMl(trans)
     const elResults = document.querySelector('.results')
     elResults.innerHTML = `<h4>Average: ${getFormattedNum(avg)}</h4>` + transHTML
-    togglePage()
+    // togglePage()
+    showResPage()
 }
 
 /*TEST START*/
@@ -157,17 +158,14 @@ function togglePage() {
    
 }
 
-function showRes(){
-    const elInputContainer = document.querySelector('.input-container')
-    const elResContainer = document.querySelector('.res-container')
-    elInputContainer.classList.add('move-right')
-    elResContainer.classList.remove('hide')
-    elResContainer.classList.add('move-right')
-    setTimeout(() => {
-        elInputContainer.classList.add('hide')
-    }, 500);
+function showResPage(){
+    const elWarpContainer = document.querySelector('.wrap-container')
+    elWarpContainer.style.translate = '0%'
+}
 
-
+function showHomePage(){
+    const elWarpContainer = document.querySelector('.wrap-container')
+    elWarpContainer.style.translate = '-50%'
 }
 
 

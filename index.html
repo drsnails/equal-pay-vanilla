@@ -11,33 +11,37 @@
 </head>
 
 <body onload="onInit()">
-    <section class="input-container">
-        <h1 class="add-user-container"><span>Add User</span> <button onclick="onAddInput()">+</button></h1>
-        <hr>
-        <section class="form" onsubmit="evs(event)">
+    <section class="main-container">
 
-        </section class="form">
-        <section class="calc-btns-container">
-            <button onclick="onCalculatePay(event)" class="calculate-btn">Calculate</button>
-            <button onclick="onClearAll(event)" class="clear-btn">Clear</button>
+        <section class="wrap-container">
+            <section class="res-container">
+                <section class="results">
+                    <!-- <h5>Average: 34</h5>
+                <section class="trans-preview">
+                    <span class="from">Bobo</span>
+                    <span data-amount="3432" class="span-img"><img src="right-arrow.svg" alt=""></span>
+                    <span class="to">Zozi</span>
+                    <span class="amount">3432</span>
+                </section> -->
+                </section>
+                <section>
+                    <button class="back" onclick="showHomePage()">Back</button>
+                </section>
+            </section>
+            <section class="input-container">
+                <h1 class="add-user-container"><span>Add User</span> <button onclick="onAddInput()">+</button></h1>
+                <hr>
+                <section class="form" onsubmit="evs(event)">
+                </section class="form">
+                <section class="calc-btns-container">
+                    <button onclick="onCalculatePay(event)" class="calculate-btn">Calculate</button>
+                    <button onclick="onClearAll(event)" class="clear-btn">Clear</button>
+                </section>
+            </section>
+           
         </section>
     </section>
 
-
-    <div class="res-container hide">
-        <section class="results">
-            <!-- <h5>Average: 34</h5>
-            <section class="trans-preview">
-                <span class="from">Bobo</span>
-                <span data-amount="3432" class="span-img"><img src="right-arrow.svg" alt=""></span>
-                <span class="to">Zozi</span>
-                <span class="amount">3432</span>
-            </section> -->
-        </section>
-        <section>
-            <button class="back" onclick="togglePage()">Back</button>
-        </section>
-    </div>
     <script src="services/storage.service.js"></script>
     <script src="services/transaction.service.js"></script>
     <script src="services/utils.js"></script>
