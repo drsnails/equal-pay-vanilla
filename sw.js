@@ -11,11 +11,8 @@ self.addEventListener('install', event => {
 
 
     const urlsToCache = [
-        // 'http://127.0.0.1:5500/',
         'https://drsnails.github.io/equal-pay-vanilla/',
-        // 'http://127.0.0.1:5500/index.html',
         'https://drsnails.github.io/equal-pay-vanilla/index.html',
-        // 'index.html',
         'https://drsnails.github.io/equal-pay-vanilla/manifest.json',
         'https://drsnails.github.io/equal-pay-vanilla/sw.js',
         'https://drsnails.github.io/equal-pay-vanilla/main.js',
