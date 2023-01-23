@@ -32,7 +32,7 @@ function getPaymentTrans(users) {
         }
     }
     // console.log('results:', results)
-    // console.log('checkResults(users, avg):', checkResults(users, avg))
+    console.log('checkResults(users, avg):', checkResults(users, avg))
     return { results, avg }
 }
 
@@ -52,6 +52,6 @@ function checkResults(users, avg) {
     console.log('avg:', avg)
     console.log('users:', users)
     return users.every(user => {
-        return user.amount.toFixed(2) === avg.toFixed(2)
+        return user.amount.toFixed(1) === avg.toFixed(1)
     })
 }

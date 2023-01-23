@@ -13,7 +13,6 @@ function onInit() {
 
 function createUsersMap() {
     let usersMap = loadUsersFromStorage()
-    console.log('createUsersMap -> usersMap', usersMap)
     if (!usersMap) {
         usersMap = {}
         createUser(usersMap)
