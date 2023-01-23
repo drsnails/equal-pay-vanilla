@@ -154,9 +154,21 @@ function togglePage() {
     const elResContainer = document.querySelector('.res-container')
     elInputContainer.classList.toggle('hide')
     elResContainer.classList.toggle('hide')
+   
 }
 
+function showRes(){
+    const elInputContainer = document.querySelector('.input-container')
+    const elResContainer = document.querySelector('.res-container')
+    elInputContainer.classList.add('move-right')
+    elResContainer.classList.remove('hide')
+    elResContainer.classList.add('move-right')
+    setTimeout(() => {
+        elInputContainer.classList.add('hide')
+    }, 500);
 
+
+}
 
 
 function evs(ev) {
