@@ -11,27 +11,20 @@ self.addEventListener('install', event => {
 
 
     const urlsToCache = [
-        'http://127.0.0.1:5500/',
+        // 'http://127.0.0.1:5500/',
         'https://drsnails.github.io/equal-pay-vanilla/',
-        'http://127.0.0.1:5500/index.html',
+        // 'http://127.0.0.1:5500/index.html',
         'https://drsnails.github.io/equal-pay-vanilla/index.html',
         // 'index.html',
-        'manifest.json',
-        // 'https://drsnails.github.io/equal-pay-vanilla/manifest.json',
-        'sw.js',
-        'main.js',
-        // 'https://drsnails.github.io/equal-pay-vanilla/sw.js',
-        'services/utils.js',
-        // 'https://drsnails.github.io/equal-pay-vanilla/services/utils.js',
-        'services/storage.service.js',
-        // 'https://drsnails.github.io/equal-pay-vanilla/services/storage.service.js',
-        'services/transaction.service.js',
-        // 'https://drsnails.github.io/equal-pay-vanilla/services/transaction.service.js',
-        // 'https://drsnails.github.io/equal-pay-vanilla/js/main.js',
-        'css/style.css',
-        './right-arrow.svg',
-        'img/logo-152.png',
-        // 'https://drsnails.github.io/equal-pay-vanilla/css/style.css',
+        'https://drsnails.github.io/equal-pay-vanilla/manifest.json',
+        'https://drsnails.github.io/equal-pay-vanilla/sw.js',
+        'https://drsnails.github.io/equal-pay-vanilla/main.js',
+        'https://drsnails.github.io/equal-pay-vanilla/services/utils.js',
+        'https://drsnails.github.io/equal-pay-vanilla/services/storage.service.js',
+        'https://drsnails.github.io/equal-pay-vanilla/services/transaction.service.js',
+        'https://drsnails.github.io/equal-pay-vanilla/css/style.css',
+        'https://drsnails.github.io/equal-pay-vanilla/right-arrow.svg',
+        'https://drsnails.github.io/equal-pay-vanilla/img/logo-152.png',
     ]
     event.waitUntil(
         caches.open('my-cache1').then(cache => {
