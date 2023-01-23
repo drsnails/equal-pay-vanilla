@@ -3,3 +3,31 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+
+function getFormattedNum(num) {
+    num = +num
+    if (num % 1 !== 0) {
+        num = num.toFixed(1)
+    }
+    return num
+}
+
+
+
+
+function getRandomId() {
+    const randomNumber = Math.floor(Math.random() * 10000000) + 1;
+
+    return 'ID-' + randomNumber;
+}
+
+
+
+function* genNextId() {
+    let id = 101
+    while (true) {
+        yield 'p' + id++
+    }
+}
