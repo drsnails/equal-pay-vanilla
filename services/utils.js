@@ -23,7 +23,6 @@ function roundNthNum(num, nthNum) {
 
 function getRandomId() {
     const randomNumber = Math.floor(Math.random() * 10000000) + 1;
-
     return 'ID-' + randomNumber;
 }
 
