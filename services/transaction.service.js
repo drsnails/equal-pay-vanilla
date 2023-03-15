@@ -9,9 +9,7 @@ function getPaymentTrans(users) {
     const overAvgUsers = users.filter(user => user.amount >= avg)
     const results = []
     for (let underAvgUser of underAvgUsers) {
-        // console.log('underAvgUser:', underAvgUser)
         let amountToPay = avg - underAvgUser.amount
-        // console.log('amountToPay:', amountToPay)
         for (let overAvgUser of overAvgUsers) {
             const amountToReceive = overAvgUser.amount - avg
             if (!amountToReceive) continue
@@ -20,18 +18,15 @@ function getPaymentTrans(users) {
                 overAvgUser.amount -= amountToPay
                 const transaction = createTransaction(underAvgUser.name, overAvgUser.name, amountToPay)
                 results.push(transaction)
-                // console.log('transaction1:', transaction)
                 break
             }
             underAvgUser.amount += amountToReceive
             overAvgUser.amount -= amountToReceive
             const transaction = createTransaction(underAvgUser.name, overAvgUser.name, amountToReceive)
-            // console.log('transaction2:', transaction)
             results.push(transaction)
             amountToPay -= amountToReceive
         }
     }
-    // console.log('results:', results)
     console.log('checkResults(users, avg):', checkResults(users, avg))
     return { results, avg }
 }

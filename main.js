@@ -97,7 +97,7 @@ function onCalculatePay(ev) {
     if (!trans.length) return
     const transHTML = getTransHTMl(trans)
     const elResults = document.querySelector('.results')
-    elResults.innerHTML = `<h4>Average: ${getFormattedNum(avg)}</h4>` + transHTML
+    elResults.innerHTML = `<h4>Average: ${Math.round(getFormattedNum(avg))}</h4>` + transHTML
     // togglePage()
     showResPage()
 }
@@ -109,7 +109,7 @@ function getTransHTMl(trans) {
         return `
         <section class="trans-preview">
             <span class="from">${trans.from}</span>
-            <span data-amount="${getFormattedNum(trans.amount)}" class="span-img"><img src="right-arrow.svg" alt=""></span>
+            <span data-amount="${Math.round(getFormattedNum(trans.amount))}" class="span-img"><img src="right-arrow.svg" alt=""></span>
             <span class="to">${trans.to}</span>
         </section>
         `
