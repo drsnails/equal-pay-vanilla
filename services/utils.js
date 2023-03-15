@@ -15,6 +15,10 @@ function getFormattedNum(num) {
 }
 
 
+function roundNthNum(num, nthNum) {
+    const tempNum = num / nthNum
+    return Math.round(tempNum) * nthNum
+}
 
 
 function getRandomId() {
