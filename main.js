@@ -102,7 +102,6 @@ function onCalculatePay(ev) {
     showResPage()
 }
 
-/*TEST START*/
 
 function getTransHTMl(trans) {
     let transHTML = trans.map(trans => {
@@ -117,32 +116,6 @@ function getTransHTMl(trans) {
 
     return transHTML
 }
-
-/*TEST END*/
-
-
-
-/*ORIGINAL START*/
-
-/*
-function getTransHTMl(trans) {
-    let transHTML = trans.map(trans => {
-        return `
-        <section class="trans-preview">
-            <span class="from">${trans.from}</span>
-            <span data-amount="${getFormattedNum(trans.amount)}" class="span-img"><img src="right-arrow.svg" alt=""></span>
-            <span class="to">${trans.to}</span>
-            <span class="amount">${getFormattedNum(trans.amount)}</span>
-        </section>
-        `
-    }).join('')
-
-    return transHTML
-}
-*/
-
-/*ORIGINAL END*/
-
 
 
 function getNextId() {
