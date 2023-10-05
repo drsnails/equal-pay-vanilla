@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(198, 198, 198);
+    background-color: #f7f7f7;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -34,10 +34,14 @@ button {
     width: 60vw;
     min-width: 350px;
     max-width: 400px;
-
     min-height: 70vh;
     margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 16px 3px #0000003b;
     overflow: hidden;
+    
 }
 .wrap-container {
     width: fit-content;
@@ -53,14 +57,14 @@ button {
     min-height: 70vh;
     min-width: 350px;
     max-width: 400px;
-    background-color: #e9e9e9;
+    background-color: #f1f1f1;
     margin: auto;
-    margin-top: 5vh;
-    margin-bottom: 30px;
+    
     padding: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
+    
     
     
 }
