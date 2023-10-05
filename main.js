@@ -1,7 +1,6 @@
 'use strict'
 navigator.serviceWorker.register('./sw.js')
 
-var gNextId = genNextId()
 
 
 let gUsersMap = {}
@@ -117,10 +116,6 @@ function getTransHTMl(trans) {
     return transHTML
 }
 
-
-function getNextId() {
-    return gNextId.next().value
-}
 
 
 function togglePage() {

@@ -1,6 +1,6 @@
 console.log('Service Worker Registered!');
 
-let CACHE_NAME = 'equal-pay-v2';  // Update the version when you want to push new content
+let CACHE_NAME = 'equal-pay-v3';  // Update the version when you want to push new content
 
 const urlsToCache = [
     'https://drsnails.github.io/equal-pay-vanilla/',

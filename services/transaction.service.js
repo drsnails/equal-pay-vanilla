@@ -27,7 +27,7 @@ function getPaymentTrans(users) {
             amountToPay -= amountToReceive
         }
     }
-    console.log('checkResults(users, avg):', checkResults(users, avg))
+    // console.log('checkResults(users, avg):', checkResults(users, avg))
     return { results, avg }
 }
 
@@ -44,8 +44,8 @@ function createTransaction(from, to, amount) {
 
 
 function checkResults(users, avg) {
-    console.log('avg:', avg)
-    console.log('users:', users)
+    // console.log('avg:', avg)
+    // console.log('users:', users)
     return users.every(user => {
         return user.amount.toFixed(1) === avg.toFixed(1)
     })
